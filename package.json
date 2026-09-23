@@ -1,0 +1,16 @@
+{
+  "name": "pulso-app",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24.0.0" },
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "db:migrate": "node scripts/migrate.js",
+    "test": "node --test --test-concurrency=1",
+    "lint": "node --check src/server.js && node --check public/app.js",
+    "typecheck": "node --check src/server.js && node --check src/auth.js && node --check src/database.js",
+    "build": "node scripts/build.js"
+  }
+}
